@@ -1,8 +1,18 @@
+.play-btn {
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -50px;
+}
+
 .empty {
     border: none;
 }
 
 table {
+    position: relative;
     width: 60%;
     margin: 0 auto;
 }
