@@ -2,7 +2,7 @@
   "name": "battleship",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "jest",
     "build": "jest --watch"
@@ -11,16 +11,23 @@
     "type": "git",
     "url": "git+https://github.com/bellom/battleship.git"
   },
-  "author": "",
+  "author": "Saheed and Oluwaseun",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bellom/battleship/issues"
   },
   "homepage": "https://github.com/bellom/battleship#readme",
   "devDependencies": {
-    "eslint": "^6.4.0",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "jest": "^24.9.0",
+    "style-loader": "^1.0.0",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "^18.0.1"
   }
 }
