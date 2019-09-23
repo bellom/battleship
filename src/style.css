@@ -46,7 +46,7 @@ th {
     border: 1px solid rgb(213, 213, 213);
 }
 
-td:hover {
+.td:hover {
     background-color: aliceblue;
 }
 
@@ -57,7 +57,6 @@ th {
 .vertical-center {
     padding: 2em;
     display: flex;
-    height: 100%;
     align-items: center;
     justify-content: center;
 }
