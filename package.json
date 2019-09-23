@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "test": "jest",
-    "build": "jest --watch"
+    "watch": "jest --watch",
+    "build": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/bellom/battleship#readme",
   "devDependencies": {
+    "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
     "css-loader": "^3.2.0",
     "eslint": "^6.1.0",
