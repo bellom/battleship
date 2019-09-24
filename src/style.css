@@ -3,6 +3,10 @@ html {
     height: 100%;
 }
 
+#destroyer {
+    border: 2px solid blue;
+}
+
 .empty {
     border: none;
 }

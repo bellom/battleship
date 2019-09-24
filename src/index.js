@@ -1,7 +1,8 @@
 import './style.css';
 
-const tds = document.getElementsByTagName('td');
-console.log(tds);
-tds
+const playBtn = document.getElementById('playBtn');
 
-module.exports = tds;
+playBtn.addEventListener('click', ()=> {
+    playBtn.style.display = "none";
+    console.log("click");
+})
