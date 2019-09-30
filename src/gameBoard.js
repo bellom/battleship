@@ -1,15 +1,43 @@
 /* eslint-disable no-plusplus */
 
 const gameBoard = () => {
-  const board = [];
+  const board = Array.from(Array(10), () => Array(10).fill(0));
 
-  for (let index = 0; index < 10; index++) {
-    board.push(Array(10).fill(0));
-  }
+  const placeShips = (ships) => {
+    const leftIsValidPosition = (size, x, y) => {
+      for (let i = 0; i < size + 1; i++) {
+        if (board[x - i][y] === 1) return false;
+      }
+      return true;
+    };
 
-  const placeShip = () => { };
+    const rightIsValidPosition = (size, x, y) => {
+      for (let i = 0; i < size + 1; i++) {
+        if (board[x + i][y] === 1) return false;
+      }
+      return true;
+    };
 
-  return { board, placeShip };
+    const topIsValidPosition = (size, x, y) => {
+      for (let i = 0; i < size + 1; i++) {
+        if (board[x][y - 1] === 1) return false;
+      }
+      return true;
+    };
+
+    const bottomIsValidPosition = (size, x, y) => {
+      for (let i = 0; i < size + 1; i++) {
+        if (board[x][y + 1] === 1) return false;
+      }
+      return true;
+    };
+
+    ships.forEach(ship => {
+
+    });
+  };
+
+  return { board, placeShips };
 };
 
 export default gameBoard;
