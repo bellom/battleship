@@ -4,7 +4,6 @@
 /* eslint-disable no-undef */
 
 import gameBoard from '../src/gameBoard';
-import ship from '../src/ship';
 
 test('returns a board of length 10', () => {
   const newBoard = gameBoard();
@@ -17,14 +16,22 @@ test('returns a board of height 10', () => {
 });
 
 test('places ships successfully', () => {
+  const ship1 = { size: 1 };
+  const ship2 = { size: 2 };
+  const ship3 = { size: 3 };
+  const ship4 = { size: 4 };
+
   let count = 0;
-  const ships = [ship(1), ship(2), ship(3), ship(4)];
+  const ships = [ship1, ship1, ship1, ship1, ship2, ship2, ship2, ship3, ship3, ship4];
+
   const board1 = gameBoard();
 
   board1.placeShips(ships);
   board1.board.forEach(row => {
-    count += row.filter(col => col === 1);
+    count += row.filter(col => col === 1).length;
   });
 
-  expect(count).toBe(10);
+  console.log(board1);
+
+  expect(count).toBe(20);
 });
