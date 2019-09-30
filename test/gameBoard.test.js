@@ -31,7 +31,5 @@ test('places ships successfully', () => {
     count += row.filter(col => col === 1).length;
   });
 
-  console.log(board1);
-
   expect(count).toBe(20);
 });
