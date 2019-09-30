@@ -22,7 +22,7 @@ test('places ships successfully', () => {
   const ship4 = { size: 4 };
 
   let count = 0;
-  const ships = [ship1, ship1, ship1, ship1, ship2, ship2, ship2, ship3, ship3, ship4];
+  const ships = [ship4, ship3, ship3, ship2, ship2, ship2, ship1, ship1, ship1, ship1];
 
   const board1 = gameBoard();
 
