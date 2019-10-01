@@ -154,7 +154,7 @@ const gameBoard = (ships) => {
     return true;
   };
 
-  const isAllSunk = () => {
+  const allShipsSunk = () => {
     if (ships.every((ship) => ship.isSunk())) return true;
     return false;
   };
@@ -163,7 +163,7 @@ const gameBoard = (ships) => {
     board,
     placeShips,
     receiveAttack,
-    isAllSunk,
+    allShipsSunk,
   };
 };
 

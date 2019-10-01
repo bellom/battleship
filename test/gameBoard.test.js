@@ -73,7 +73,7 @@ test('are all sunk', () => {
     });
   });
 
-  expect(board.isAllSunk()).toBeTruthy();
+  expect(board.allShipsSunk()).toBeTruthy();
 });
 
 test('are not all sunk', () => {
@@ -85,5 +85,5 @@ test('are not all sunk', () => {
     board.receiveAttack(coordinate[0], coordinate[1]);
   });
 
-  expect(board.isAllSunk()).toBeFalsy();
+  expect(board.allShipsSunk()).toBeFalsy();
 });
