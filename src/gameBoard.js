@@ -74,27 +74,27 @@ const gameBoard = (ships) => {
     const addShipToLeft = (ship, x, y) => {
       for (let i = 0; i < ship.size; i++) {
         board[x][y - i] = 1;
-        ship.coordinates.push((`${x}${y - i}`));
+        ship.coordinates.push([x, y - i]);
       }
     };
 
     const addShipToRight = (ship, x, y) => {
       for (let i = 0; i < ship.size; i++) {
         board[x][y + i] = 1;
-        ship.coordinates.push((`${x}${y + i}`));
+        ship.coordinates.push([x, y + i]);
       }
     };
 
     const addShipToTop = (ship, x, y) => {
       for (let i = 0; i < ship.size; i++) {
         board[x - i][y] = 1;
-        ship.coordinates.push((`${x - i}${y}`));
+        ship.coordinates.push([x - i, y]);
       }
     };
 
     const addShipToBottom = (ship, x, y) => {
       for (let i = 0; i < ship.size; i++) {
-        ship.coordinates.push((`${x + i}${y}`));
+        ship.coordinates.push([x + i, y]);
         board[x + i][y] = 1;
       }
     };
@@ -154,7 +154,17 @@ const gameBoard = (ships) => {
     return true;
   };
 
-  return { board, placeShips, receiveAttack };
+  const isAllSunk = () => {
+    if (ships.every((ship) => ship.isSunk())) return true;
+    return false;
+  };
+
+  return {
+    board,
+    placeShips,
+    receiveAttack,
+    isAllSunk,
+  };
 };
 
 export default gameBoard;

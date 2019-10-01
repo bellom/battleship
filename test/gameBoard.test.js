@@ -1,7 +1,5 @@
-/* eslint-disable arrow-parens */
-/* eslint-disable import/no-named-as-default-member */
-/* eslint-disable import/no-named-as-default */
 /* eslint-disable no-undef */
+
 
 import gameBoard from '../src/gameBoard';
 import ship from '../src/ship';
@@ -34,8 +32,8 @@ test('places ships successfully', () => {
   const board1 = gameBoard(ships);
 
   board1.placeShips();
-  board1.board.forEach(row => {
-    count += row.filter(col => col === 1).length;
+  board1.board.forEach((row) => {
+    count += row.filter((col) => col === 1).length;
   });
 
   expect(count).toBe(20);
@@ -62,4 +60,30 @@ test('misses when attacked on an empty coordinate', () => {
   board.receiveAttack(1, 1);
   expect(ships[0].hits.length).toBe(0);
   expect(board.receiveAttack(0, 0)).toBeFalsy();
+});
+
+test('are all sunk', () => {
+  const ships = [ship(4), ship(2), ship(3)];
+  const board = gameBoard(ships);
+  board.placeShips();
+
+  ships.forEach((sh) => {
+    sh.coordinates.forEach((coordinate) => {
+      board.receiveAttack(coordinate[0], coordinate[1]);
+    });
+  });
+
+  expect(board.isAllSunk()).toBeTruthy();
+});
+
+test('are not all sunk', () => {
+  const ships = [ship(4), ship(2), ship(3)];
+  const board = gameBoard(ships);
+  board.placeShips();
+
+  ships[1].coordinates.forEach((coordinate) => {
+    board.receiveAttack(coordinate[0], coordinate[1]);
+  });
+
+  expect(board.isAllSunk()).toBeFalsy();
 });
