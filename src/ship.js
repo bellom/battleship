@@ -6,11 +6,14 @@ const ship = (size) => {
 
   const isSunk = () => size === hits.length;
 
+  const allSunk = () => size === 0;
+
   return {
     size,
     hit,
     hits,
     isSunk,
+    allSunk,
     coordinates,
   };
 };

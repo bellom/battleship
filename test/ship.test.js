@@ -17,3 +17,8 @@ test('is not sunk', () => {
   const testShip = ship(1);
   expect(testShip.isSunk()).toBeFalsy();
 });
+
+test('all ship are sunk', () => {
+  const testShip = ship(0);
+  expect(testShip.allSunk()).toBeTruthy();
+});
