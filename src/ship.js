@@ -2,7 +2,7 @@ const ship = (size) => {
   const coordinates = [];
   const hits = [];
 
-  const hit = (coordinate) => hits.push(coordinate);
+  const hit = (x, y) => hits.push([x, y]);
 
   const isSunk = () => size === hits.length;
 
