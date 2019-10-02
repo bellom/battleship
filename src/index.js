@@ -1,7 +1,4 @@
 import './style.css';
+import displayGame from './displayGame';
 
-const playBtn = document.getElementById('playBtn');
-
-playBtn.addEventListener('click', () => {
-  playBtn.style.display = 'none';
-});
+displayGame();
