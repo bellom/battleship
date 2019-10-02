@@ -14,7 +14,11 @@ const gameBoard = (ships) => {
     const leftIsValidPosition = (size, x, y) => {
       if (y - size < 0
         || (board[x][y - size] === 1)
+        || (x + 1 <= 9 && board[x + 1][y - size] === 1)
+        || (x - 1 >= 0 && board[x - 1][y - size] === 1)
         || (y + 1 <= 9 && board[x][y + 1] === 1)
+        || (y + 1 <= 9 && x - 1 >= 0 && board[x - 1][y + 1] === 1)
+        || (y + 1 <= 9 && x + 1 <= 9 && board[x + 1][y + 1] === 1)
         || (x - 1 >= 0 && board[x - 1][y] === 1)
         || (x + 1 <= 9 && board[x + 1][y] === 1)) return false;
 
@@ -29,7 +33,11 @@ const gameBoard = (ships) => {
     const rightIsValidPosition = (size, x, y) => {
       if (y + size > 9
         || (board[x][y + size] === 1)
+        || (x - 1 >= 0 && board[x - 1][y + size] === 1)
+        || (x + 1 <= 9 && board[x + 1][y + size] === 1)
         || (y - 1 >= 0 && board[x][y - 1] === 1)
+        || (y + 1 <= 9 && x - 1 >= 0 && board[x - 1][y - 1] === 1)
+        || (y + 1 <= 9 && x + 1 <= 9 && board[x + 1][y - 1] === 1)
         || (x - 1 >= 0 && board[x - 1][y] === 1)
         || (x + 1 <= 9 && board[x + 1][y] === 1)) return false;
 
@@ -44,7 +52,11 @@ const gameBoard = (ships) => {
     const topIsValidPosition = (size, x, y) => {
       if (x - size < 0
         || (board[x - size][y] === 1)
+        || (y + 1 <= 9 && board[x - size][y + 1] === 1)
+        || (y - 1 >= 0 && board[x - size][y - 1] === 1)
         || (x + 1 <= 9 && board[x + 1][y] === 1)
+        || (x + 1 <= 9 && y + 1 <= 9 && board[x + 1][y + 1] === 1)
+        || (x + 1 <= 9 && y - 1 >= 0 && board[x + 1][y - 1] === 1)
         || (y - 1 >= 0 && board[x][y - 1] === 1)
         || (y + 1 <= 9 && board[x][y + 1] === 1)) return false;
 
@@ -59,7 +71,11 @@ const gameBoard = (ships) => {
     const bottomIsValidPosition = (size, x, y) => {
       if (x + size > 9
         || (board[x + size][y] === 1)
+        || (y - 1 >= 0 && board[x + size][y - 1] === 1)
+        || (y + 1 <= 9 && board[x + size][y + 1] === 1)
         || (x - 1 >= 0 && board[x - 1][y] === 1)
+        || (x - 1 >= 0 && y + 1 <= 9 && board[x - 1][y + 1] === 1)
+        || (x - 1 >= 0 && y - 1 >= 0 && board[x - 1][y - 1] === 1)
         || (y - 1 >= 0 && board[x][y - 1] === 1)
         || (y + 1 <= 9 && board[x][y + 1] === 1)) return false;
 
