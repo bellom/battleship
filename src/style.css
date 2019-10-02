@@ -3,17 +3,17 @@ html {
     height: 100%;
 }
 
-.ship{
-    border: 2px solid blue;
+#player .ship {
+    border: none;
+    background-color: #2f70a5;
 }
 
 .empty {
     border: none;
 }
 
-.inactive {
-    color: rgb(202, 201, 201);
-    border: 0.5px;
+.computer .hover:hover {
+    background-color: aliceblue;
 }
 
 .main {
@@ -37,17 +37,47 @@ html {
     background-color: #2f70a5;
 }
 
+.randomize {
+    cursor: pointer;
+    color: #4682b4;
+}
+
+span.grid {
+    border-right: #2f70a5 solid 0.1em;
+    padding-right: 5px;
+}
+
+.randomize .material-icons {
+    font-size: 12px;
+}
+
 table {
-    position: relative;
-    width: 396px;
-    height: 396px;
+    width: 90%;
     margin: 0 auto;
 }
 
-td,
-th {
-    width: 9%;
+td {
+    width: calc(100/11%);
+    position: relative;
     border: 1px solid rgb(213, 213, 213);
+}
+
+th {
+    font-size: 13px;
+}
+
+td:after {
+    content: '';
+    display: block;
+    margin-top: 100%;
+}
+
+td .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .td:hover {
