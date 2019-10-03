@@ -6,7 +6,7 @@ const displayGame = () => {
   const player = document.getElementById('player');
   const computer = document.getElementById('computer');
 
-  const shipsOne = [
+  const playerShips = [
     ship(4),
     ship(3),
     ship(3),
@@ -19,7 +19,7 @@ const displayGame = () => {
     ship(1),
   ];
 
-  const shipsTwo = [
+  const computerShips = [
     ship(4),
     ship(3),
     ship(3),
@@ -32,20 +32,20 @@ const displayGame = () => {
     ship(1),
   ];
 
-  const boardOne = gameBoard(shipsOne);
-  const boardTwo = gameBoard(shipsTwo);
+  const playerBoard = gameBoard(playerShips);
+  const computerBoard = gameBoard(computerShips);
 
-  boardOne.placeShips();
-  boardTwo.placeShips();
+  playerBoard.placeShips();
+  computerBoard.placeShips();
 
-  player.innerHTML = displayBoard(boardOne.board);
-  computer.innerHTML = displayBoard(boardOne.board);
+  player.innerHTML = displayBoard(playerBoard.board);
+  computer.innerHTML = displayBoard(computerBoard.board);
 
   return {
-    boardOne,
-    boardTwo,
-    shipsOne,
-    shipsTwo,
+    playerBoard,
+    computerBoard,
+    playerShips,
+    computerShips,
   };
 };
 

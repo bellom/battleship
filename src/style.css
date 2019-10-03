@@ -42,6 +42,14 @@ html {
     color: #4682b4;
 }
 
+.randomize:hover {
+    border-bottom: 2px dotted;
+}
+
+.randomize:active {
+    border-bottom: 2px dotted red;
+}
+
 span.grid {
     border-right: #2f70a5 solid 0.1em;
     padding-right: 5px;
@@ -56,6 +64,10 @@ table {
     margin: 0 auto;
 }
 
+thead th {
+    padding-bottom: 10px;
+}
+
 td {
     width: calc(100/11%);
     position: relative;
@@ -64,6 +76,7 @@ td {
 
 th {
     font-size: 13px;
+    color: #4682b4;
 }
 
 td:after {
