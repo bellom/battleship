@@ -1,7 +1,6 @@
 import './style.css';
-import displayGame from './displayGame';
 import clickListeners from './clickListners';
+import gameLogic from './displayGame';
 
-displayGame();
+gameLogic.displayGame();
 clickListeners();
-// printToConsole();

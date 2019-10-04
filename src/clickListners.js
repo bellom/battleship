@@ -1,10 +1,10 @@
-import displayGame from './displayGame';
+import gameLogic from './displayGame';
 
 const clickListeners = () => {
   const randomize = document.getElementById('randomize');
 
   const rearrange = () => {
-    displayGame();
+    // gameLogic.displayGame();
   };
 
   randomize.addEventListener('click', rearrange, false);
