@@ -14,6 +14,7 @@ html {
 
 .computer .hover:hover {
     background-color: aliceblue;
+    border: darkgreen dotted 3px;
 }
 
 .main {
@@ -21,11 +22,7 @@ html {
 }
 
 .miss {
-    height: 20%;
-    width: 20%;
-    background-color: #000000;
-    border-radius: 50%;
-    display: inline-block;
+    background-color: rgb(203, 236, 203);
 }
 
 .hit {
