@@ -154,26 +154,19 @@ const gameBoard = (ships) => {
   const receiveAttack = (x, y) => {
     if (board[x][y] === box.empty) {
       board[x][y] = box.miss;
-      return false;
-    }
-
-    if (board[x][y] === box.hasShip) {
+    } else if (board[x][y] === box.hasShip) {
+      board[x][y] = box.hit;
       ships.forEach((ship) => {
         ship.coordinates.forEach((location) => {
           if (location[0] === x && location[1] === y) {
-            board[x][y] = box.hit;
             ship.hit(x, y);
           }
         });
       });
     }
-    return true;
   };
 
-  const allShipsSunk = () => {
-    if (ships.every((ship) => ship.isSunk())) return true;
-    return false;
-  };
+  const allShipsSunk = () => ships.every((ship) => ship.isSunk());
 
   return {
     board,
