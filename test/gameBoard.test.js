@@ -47,10 +47,6 @@ test('hits the ship successfuly when attacked at a ship coordinate', () => {
   board1.receiveAttack(ships[1].coordinates[0][0], ships[1].coordinates[0][1]);
 
   expect(ships[1].hits.length).toBe(1);
-  expect(
-    board1.receiveAttack(ships[0].coordinates[0][0],
-      ships[0].coordinates[0][1]),
-  ).toBeTruthy();
 });
 
 test('misses when attacked on an empty coordinate', () => {
