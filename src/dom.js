@@ -36,10 +36,17 @@ const displayBoard = (board) => {
     th.innerText = letters[row];
     for (let col = 0; col < board[row].length; col++) {
       const td = document.createElement('td');
-      if (board[row][col] === 1) td.classList.add('ship');
-      if (board[row][col] === 2) td.classList.add('hit');
-      if (board[row][col] === 3) td.classList.add('miss');
-      td.classList.add('hover');
+      if (board[row][col] === 1) {
+        td.classList.add('ship');
+        td.classList.add('hover');
+      } else if (board[row][col] === 2) {
+        td.classList.add('hit');
+      } else if (board[row][col] === 3) {
+        td.classList.add('miss');
+      } else {
+        td.classList.add('hover');
+      }
+      td.id = `${row}${col}`;
       trow.appendChild(td);
     }
     tbody.appendChild(trow);
