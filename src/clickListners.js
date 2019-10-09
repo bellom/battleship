@@ -10,4 +10,7 @@ const clickListeners = () => {
   randomize.addEventListener('click', rearrange, false);
 };
 
+
+
 export default clickListeners;
+

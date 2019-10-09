@@ -1,36 +1,36 @@
 import './style.css';
 import ship from './ship';
 import gameBoard from './gameBoard';
-// import player from './player';
-import displayBoard from './dom';
+import player from './player';
+import { displayBoard, displayWinner} from './dom';
 import randomWholeNUmberBetween from './utilities';
 
-// const humanPlayer = player('Human', false);
-// const computerPlayer = player('Computer', true);
+const humanPlayer = player('Human', false);
+const computerPlayer = player('Computer', true);
 
 const playerShips = [
-  ship(4),
-  ship(3),
-  ship(3),
+  // ship(4),
+  // ship(3),
+  // ship(3),
+  // ship(2),
   ship(2),
-  ship(2),
-  ship(2),
-  ship(1),
-  ship(1),
-  ship(1),
+  // ship(2),
+  // ship(1),
+  // ship(1),
+  // ship(1),
   ship(1),
 ];
 
 const computerShips = [
-  ship(4),
-  ship(3),
-  ship(3),
+  // ship(4),
+  // ship(3),
+  // ship(3),
+  // ship(2),
+  // ship(2),
   ship(2),
-  ship(2),
-  ship(2),
-  ship(1),
-  ship(1),
-  ship(1),
+  // ship(1),
+  // ship(1),
+  // ship(1),
   ship(1),
 ];
 
@@ -70,16 +70,17 @@ const computerPlay = (board, played) => {
   board.receiveAttack(x, y);
   played.push(`${x}${y}`);
   displayGame();
+  if(checkWin(playerBoard.board)) displayWinner(computerPlayer.name);
 };
 
-// const playerWin = () => {
-//   let count = 0;
+const checkWin = (board) => {
+  let count = 0;
 
-//   computerBoard.board.forEach((row) => {
-//     count += row.filter((val) => val === 2).length;
-//   });
-//   return count === 20;
-// };
+  board.forEach((row) => {
+    count += row.filter((val) => val === 2).length;
+  });
+  return count === 3;
+};
 
 
 const humanPlay = (board) => {
@@ -87,12 +88,14 @@ const humanPlay = (board) => {
   const playedPositions = [];
 
   computer.addEventListener('click', (e) => {
+    console.log(e.target.id);
+    if(typeof e.target.id === undefined) return null;
     board.receiveAttack(e.target.id[0], e.target.id[1]);
     displayGame();
+    if(checkWin(computerBoard.board)) displayWinner(humanPlayer.name);
     computerPlay(playerBoard, playedPositions);
-    // console.log(playerWin());
-    // console.log(computerBoard.allShipsSunk());
-    // console.log(computerBoard.board);
+    console.log(checkWin(computerBoard.board));
+    console.log(computerBoard.board);
   });
 };
 

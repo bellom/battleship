@@ -21,6 +21,10 @@ html {
     height: 100%;
 }
 
+.miss, .hit {
+    pointer-events: none; 
+}
+
 .miss {
     background-color: rgb(203, 236, 203);
 }
