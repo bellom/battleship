@@ -2,7 +2,7 @@ import './style.css';
 import ship from './ship';
 import gameBoard from './gameBoard';
 import player from './player';
-import { displayBoard, displayWinner} from './dom';
+import { displayBoard, displayWinner } from './dom';
 import randomWholeNUmberBetween from './utilities';
 
 const humanPlayer = player('Human', false);
@@ -57,6 +57,14 @@ const displayGame = () => {
   computer.innerHTML = displayBoard(computerBoard.board);
 };
 
+const checkWin = (board) => {
+  let count = 0;
+
+  board.forEach((row) => {
+    count += row.filter((val) => val === 2).length;
+  });
+  return count === 3;
+};
 
 const computerPlay = (board, played) => {
   let x = randomWholeNUmberBetween(0, 9);
@@ -70,32 +78,23 @@ const computerPlay = (board, played) => {
   board.receiveAttack(x, y);
   played.push(`${x}${y}`);
   displayGame();
-  if(checkWin(playerBoard.board)) displayWinner(computerPlayer.name);
-};
-
-const checkWin = (board) => {
-  let count = 0;
-
-  board.forEach((row) => {
-    count += row.filter((val) => val === 2).length;
-  });
-  return count === 3;
+  if (checkWin(playerBoard.board)) displayWinner(computerPlayer.name);
 };
 
 
 const humanPlay = (board) => {
   const computer = document.getElementById('computer');
-  const playedPositions = [];
+  const computerPlayedPositions = [];
+  const humanPlayedPositions = [];
 
   computer.addEventListener('click', (e) => {
-    console.log(e.target.id);
-    if(typeof e.target.id === undefined) return null;
-    board.receiveAttack(e.target.id[0], e.target.id[1]);
-    displayGame();
-    if(checkWin(computerBoard.board)) displayWinner(humanPlayer.name);
-    computerPlay(playerBoard, playedPositions);
-    console.log(checkWin(computerBoard.board));
-    console.log(computerBoard.board);
+    if (!humanPlayedPositions.includes(e.target.id)) {
+      humanPlayedPositions.push(`${e.target.id}`);
+      board.receiveAttack(e.target.id[0], e.target.id[1]);
+      displayGame();
+      if (checkWin(computerBoard.board)) displayWinner(humanPlayer.name);
+      computerPlay(playerBoard, computerPlayedPositions);
+    }
   });
 };
 
