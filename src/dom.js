@@ -61,10 +61,8 @@ const displayBoard = (board) => {
 
 const displayWinner = (name) => {
   const alert = document.getElementById('alert');
-  const div = document.createElement('div');
-  div.classList.add('alert', 'alert-success');
-  div.innerText = `${name} Wins!`;
-  alert.appendChild(div);
+  alert.classList.add('alert', 'alert-success');
+  alert.innerText = `${name} Wins!`;
 };
 
 export { displayBoard, displayWinner };
