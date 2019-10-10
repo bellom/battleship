@@ -168,7 +168,7 @@ const gameBoard = (ships) => {
 
   // const allShipsSunk = () => ships.every((ship) => ship.isSunk());
 
-  const allShipsSunk = (board) => {
+  const allShipsSunk = () => {
     let count = 0;
 
     board.forEach((row) => {
