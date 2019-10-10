@@ -59,7 +59,7 @@ test('misses when attacked on an empty coordinate', () => {
 });
 
 test('are all sunk', () => {
-  const ships = [ship(4), ship(2), ship(3)];
+  const ships = [ship(1), ship(1), ship(1)];
   const board = gameBoard(ships);
   board.placeShips();
 
@@ -73,7 +73,7 @@ test('are all sunk', () => {
 });
 
 test('are not all sunk', () => {
-  const ships = [ship(4), ship(2), ship(3)];
+  const ships = [ship(1), ship(1), ship(1)];
   const board = gameBoard(ships);
   board.placeShips();
 
