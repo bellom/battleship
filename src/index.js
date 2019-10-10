@@ -87,15 +87,22 @@ const humanPlay = (board) => {
   const computerPlayedPositions = [];
   const humanPlayedPositions = [];
 
-  computer.addEventListener('click', (e) => {
-    if (!humanPlayedPositions.includes(e.target.id)) {
+  const handler = (e) => {
+    if (checkWin(playerBoard.board)) computer.removeEventListener('click', handler);
+    if (!humanPlayedPositions.includes(e.target.id) || !checkWin(playerBoard.board)) {
       humanPlayedPositions.push(`${e.target.id}`);
       board.receiveAttack(e.target.id[0], e.target.id[1]);
       displayGame();
-      if (checkWin(computerBoard.board)) displayWinner(humanPlayer.name);
+      if (checkWin(computerBoard.board)) {
+        displayWinner(humanPlayer.name);
+        computer.removeEventListener('click', handler);
+      }
+      console.log(computerBoard.board);
       computerPlay(playerBoard, computerPlayedPositions);
     }
-  });
+  };
+
+  computer.addEventListener('click', handler);
 };
 
 displayGame();
