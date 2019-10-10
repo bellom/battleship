@@ -166,7 +166,17 @@ const gameBoard = (ships) => {
     }
   };
 
-  const allShipsSunk = () => ships.every((ship) => ship.isSunk());
+  // const allShipsSunk = () => ships.every((ship) => ship.isSunk());
+
+  const allShipsSunk = (board) => {
+    let count = 0;
+
+    board.forEach((row) => {
+      count += row.filter((val) => val === 2).length;
+    });
+    return count === 3;
+  };
+
 
   return {
     board,
