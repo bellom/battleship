@@ -57,14 +57,6 @@ const displayGame = () => {
   computer.innerHTML = displayBoard(computerBoard.board);
 };
 
-// const checkWin = (board) => {
-//   let count = 0;
-
-//   board.forEach((row) => {
-//     count += row.filter((val) => val === 2).length;
-//   });
-//   return count === 3;
-// };
 
 const computerPlay = (board, played) => {
   let x = randomWholeNUmberBetween(0, 9);
