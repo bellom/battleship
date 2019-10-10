@@ -57,14 +57,14 @@ const displayGame = () => {
   computer.innerHTML = displayBoard(computerBoard.board);
 };
 
-const checkWin = (board) => {
-  let count = 0;
+// const checkWin = (board) => {
+//   let count = 0;
 
-  board.forEach((row) => {
-    count += row.filter((val) => val === 2).length;
-  });
-  return count === 3;
-};
+//   board.forEach((row) => {
+//     count += row.filter((val) => val === 2).length;
+//   });
+//   return count === 3;
+// };
 
 const computerPlay = (board, played) => {
   let x = randomWholeNUmberBetween(0, 9);
@@ -78,7 +78,7 @@ const computerPlay = (board, played) => {
   board.receiveAttack(x, y);
   played.push(`${x}${y}`);
   displayGame();
-  if (checkWin(playerBoard.board)) displayWinner(computerPlayer.name);
+  if (board.allShipsSunk(playerBoard.board)) displayWinner(computerPlayer.name);
 };
 
 
@@ -88,12 +88,12 @@ const humanPlay = (board) => {
   const humanPlayedPositions = [];
 
   const handler = (e) => {
-    if (checkWin(playerBoard.board)) computer.removeEventListener('click', handler);
-    if (!humanPlayedPositions.includes(e.target.id) || !checkWin(playerBoard.board)) {
+    if (board.allShipsSunk(playerBoard.board)) computer.removeEventListener('click', handler);
+    if (!humanPlayedPositions.includes(e.target.id) || !board.allShipsSunk(playerBoard.board)) {
       humanPlayedPositions.push(`${e.target.id}`);
       board.receiveAttack(e.target.id[0], e.target.id[1]);
       displayGame();
-      if (checkWin(computerBoard.board)) {
+      if (board.allShipsSunk(computerBoard.board)) {
         displayWinner(humanPlayer.name);
         computer.removeEventListener('click', handler);
       }
