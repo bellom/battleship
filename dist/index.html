@@ -15,20 +15,19 @@
 <body>
     <div class="container main">
         <h1 class="text-center pt-5">Battleship</h1>
-        <div id="alert"></div>
+        <div id="alert" class="mx-auto"></div>
 
         <div class="row vertical-center">
             <div class="col-md-6">
                 <div class="player" id="player"></div>
                 <h6 class="text-center grid">
                     <span class="grid">Your Grid</span>
-                    <span class="randomize" id="randomize" onclick="location.reload()">Randomize<i class="material-icons text-center">autorenew</i></span>
+                    <span class="randomize" id="reset" onclick="location.reload()">Randomize<i class="material-icons text-center">autorenew</i></span>
                 </h6>
                 
             </div>
             
             <div class="col-md-6">
-                <span class="randomize resetBtn" id="randomize" onclick="location.reload()">Reset Game<i class="material-icons text-center">autorenew</i></span>
                 <div class="computer" id="computer"></div>
                 <h6 class="text-center grid">Opponent's Grid</h6>
             </div>
