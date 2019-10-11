@@ -7,5 +7,6 @@ linters:
 files:
     ignore:
         - 'src/generated/*'
+        - 'src/style.css'
         - 'webroot/bower_components/*'
         - 'dist/*'
