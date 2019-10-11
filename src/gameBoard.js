@@ -166,13 +166,24 @@ const gameBoard = (ships) => {
     }
   };
 
+  const totalShipSize = () => {
+    let count = 0;
+
+    ships.forEach((sh) => {
+      count += sh.size;
+    });
+
+    return count;
+  };
+
   const allShipsSunk = () => {
     let count = 0;
 
     board.forEach((row) => {
       count += row.filter((val) => val === 2).length;
     });
-    return count === 3;
+
+    return count === totalShipSize();
   };
 
 
