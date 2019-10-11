@@ -16,11 +16,6 @@ html {
     border: none;
 }
 
-.grid {
-    border-right: #2f70a5 solid 0.1em;
-    padding-right: 5px;
-}
-
 .hit {
     background:
         linear-gradient(to top left,
@@ -57,8 +52,10 @@ html {
 }
 
 .randomize {
+    border-left: #2f70a5 solid 0.1em;
     color: #4682b4;
     cursor: pointer;
+    padding-left: 5px;
 }
 
 .randomize:active {
