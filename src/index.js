@@ -70,7 +70,7 @@ const computerPlay = (board, played) => {
   board.receiveAttack(x, y);
   played.push(`${x}${y}`);
   displayGame();
-  if (board.allShipsSunk()) displayWinner(computerPlayer.name);
+  if (board.allShipsSunk()) displayWinner(computerPlayer);
 };
 
 
@@ -86,10 +86,9 @@ const humanPlay = (board) => {
       board.receiveAttack(e.target.id[0], e.target.id[1]);
       displayGame();
       if (board.allShipsSunk(computerBoard.board)) {
-        displayWinner(humanPlayer.name);
+        displayWinner(humanPlayer);
         computer.removeEventListener('click', handler);
       }
-      console.log(computerBoard.board);
       computerPlay(playerBoard, computerPlayedPositions);
     }
   };
