@@ -16,6 +16,11 @@ html {
     border: none;
 }
 
+.grid {
+    border-right: #2f70a5 solid 0.1em;
+    padding-right: 5px;
+}
+
 .hit {
     background:
         linear-gradient(to top left,
@@ -46,14 +51,14 @@ html {
     pointer-events: none;
 }
 
-#player .ship {
-    border: none;
+.player .ship {
     background-color: #2f70a5;
+    border: none;
 }
 
 .randomize {
-    cursor: pointer;
     color: #4682b4;
+    cursor: pointer;
 }
 
 .randomize:active {
@@ -64,8 +69,6 @@ html {
     border-bottom: 2px dotted;
 }
 
-
-
 .randomize .material-icons {
     font-size: 12px;
 }
@@ -75,20 +78,15 @@ html {
 
 }
 
-span.grid {
-    border-right: #2f70a5 solid 0.1em;
-    padding-right: 5px;
-}
-
 table {
-    width: 90%;
     margin: 0 auto;
+    width: 90%;
 }
 
 td {
-    width: calc(100/11%);
-    position: relative;
     border: 1px solid rgb(213, 213, 213);
+    position: relative;
+    width: calc(100/11%);
 }
 
 td:after {
@@ -98,11 +96,11 @@ td:after {
 }
 
 td .content {
-    position: absolute;
-    top: 0;
     bottom: 0;
     left: 0;
+    position: absolute;
     right: 0;
+    top: 0;
 }
 
 .td:hover {
@@ -110,8 +108,8 @@ td .content {
 }
 
 th {
-    font-size: 13px;
     color: #4682b4;
+    font-size: 13px;
     font-weight: 100;
 }
 
@@ -120,8 +118,8 @@ thead th {
 }
 
 .vertical-center {
-    padding: 2em;
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
+    padding: 2em;
 }
