@@ -68,6 +68,11 @@ span.grid {
     font-size: 12px;
 }
 
+.resetBtn {
+    margin-left: -44px;
+}
+
+
 table {
     width: 90%;
     margin: 0 auto;

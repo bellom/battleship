@@ -15,8 +15,8 @@ const playerShips = [
   // ship(2),
   // ship(2),
   // ship(2),
-  // ship(1),
-  // ship(1),
+  ship(1),
+  ship(1),
   // ship(1),
   ship(1),
 ];
@@ -28,8 +28,8 @@ const computerShips = [
   // ship(2),
   // ship(2),
   // ship(2),
-  // ship(1),
-  // ship(1),
+  ship(1),
+  ship(1),
   // ship(1),
   ship(1),
 ];
@@ -70,7 +70,7 @@ const computerPlay = (board, played) => {
   board.receiveAttack(x, y);
   played.push(`${x}${y}`);
   displayGame();
-  if (board.allShipsSunk(playerBoard.board)) displayWinner(computerPlayer.name);
+  if (board.allShipsSunk()) displayWinner(computerPlayer.name);
 };
 
 
@@ -80,8 +80,8 @@ const humanPlay = (board) => {
   const humanPlayedPositions = [];
 
   const handler = (e) => {
-    if (board.allShipsSunk(playerBoard.board)) computer.removeEventListener('click', handler);
-    if (!humanPlayedPositions.includes(e.target.id) || !board.allShipsSunk(playerBoard.board)) {
+    if (playerBoard.allShipsSunk()) computer.removeEventListener('click', handler);
+    if (!humanPlayedPositions.includes(e.target.id) && !playerBoard.allShipsSunk()) {
       humanPlayedPositions.push(`${e.target.id}`);
       board.receiveAttack(e.target.id[0], e.target.id[1]);
       displayGame();
