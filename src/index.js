@@ -5,32 +5,32 @@ import player from './player';
 import { displayBoard, displayWinner } from './dom';
 import randomWholeNUmberBetween from './utilities';
 
-const humanPlayer = player('Human', false);
-const computerPlayer = player('Computer', true);
+const humanPlayer = player('Human');
+const computerPlayer = player('Computer');
 
 const playerShips = [
-  // ship(4),
-  // ship(3),
-  // ship(3),
-  // ship(2),
-  // ship(2),
-  // ship(2),
+  ship(4),
+  ship(3),
+  ship(3),
+  ship(2),
+  ship(2),
+  ship(2),
   ship(1),
   ship(1),
-  // ship(1),
+  ship(1),
   ship(1),
 ];
 
 const computerShips = [
-  // ship(4),
-  // ship(3),
-  // ship(3),
-  // ship(2),
-  // ship(2),
-  // ship(2),
-  // ship(1),
-  // ship(1),
-  // ship(1),
+  ship(4),
+  ship(3),
+  ship(3),
+  ship(2),
+  ship(2),
+  ship(2),
+  ship(1),
+  ship(1),
+  ship(1),
   ship(1),
 ];
 
