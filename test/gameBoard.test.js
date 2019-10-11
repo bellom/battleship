@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-
+/* eslint-disable arrow-parens */
 
 import gameBoard from '../src/gameBoard';
 import ship from '../src/ship';
@@ -33,7 +33,7 @@ test('places ships successfully', () => {
 
   board1.placeShips();
   board1.board.forEach((row) => {
-    count += row.filter((col) => col === 1).length;
+    count += row.filter(col => col === 1).length;
   });
 
   expect(count).toBe(20);

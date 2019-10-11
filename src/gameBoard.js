@@ -1,4 +1,6 @@
 /* eslint-disable no-plusplus */
+/* eslint-disable arrow-parens */
+
 import randomWholeNUmberBetween from './utilities';
 
 const gameBoard = (ships) => {
@@ -180,7 +182,7 @@ const gameBoard = (ships) => {
     let count = 0;
 
     board.forEach((row) => {
-      count += row.filter((val) => val === 2).length;
+      count += row.filter(val => val === 2).length;
     });
 
     return count === totalShipSize();
