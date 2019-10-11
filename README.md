@@ -16,11 +16,11 @@
 
 ### 🏠 [Homepage](https://github.com/bellom/battleship#readme)
 
+This is a game of [Battleship](https://en.wikipedia.org/wiki/Battleship_(game)) built with JavaScript, Bootstrap, CSS, and HTML.
+
 ## Install
 
-```sh
-npm install
-```
+Clone the repo to your local machine using `https://github.com/suretrust/weather-app.git`. Then install dependencies using the command `npm install`.
 
 ## Run tests
 
@@ -28,11 +28,12 @@ npm install
 npm run test
 ```
 
-## Author
+## Authors
 
 👤 **Saheed and Oluwaseun**
 
 * Github: [@bellom](https://github.com/bellom)
+* Github: [@suretrust](https://github.com/suretrust)
 
 ## 🤝 Contributing
 
