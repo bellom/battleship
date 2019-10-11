@@ -20,7 +20,7 @@ This is a game of [Battleship](https://en.wikipedia.org/wiki/Battleship_(game)) 
 
 ## Install
 
-Clone the repo to your local machine using `https://github.com/suretrust/weather-app.git`. Then install dependencies using the command `npm install`.
+Clone the repo to your local machine using `https://github.com/bellom/battleship.git`. Then install dependencies using the command `npm install`.
 
 ## Run tests
 
