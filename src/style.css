@@ -3,6 +3,10 @@ html {
     height: 100%;
 }
 
+.alert {
+    max-width: 60%;
+}
+
 #player .ship {
     border: none;
     background-color: #2f70a5;
@@ -69,7 +73,8 @@ span.grid {
 }
 
 .resetBtn {
-    margin-left: -44px;
+    border-left: #2f70a5 solid 0.1em;
+
 }
 
 

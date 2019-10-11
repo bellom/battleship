@@ -28,8 +28,8 @@ const computerShips = [
   // ship(2),
   // ship(2),
   // ship(2),
-  ship(1),
-  ship(1),
+  // ship(1),
+  // ship(1),
   // ship(1),
   ship(1),
 ];

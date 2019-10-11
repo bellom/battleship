@@ -61,8 +61,21 @@ const displayBoard = (board) => {
 
 const displayWinner = (name) => {
   const alert = document.getElementById('alert');
-  alert.classList.add('alert', 'alert-success');
-  alert.innerText = `${name} Wins!`;
+  const i = document.createElement('i');
+  const reset = document.createElement('span');
+
+  i.classList.add('material-icons');
+  i.innerText = 'autorenew';
+
+  reset.classList.add('randomize', 'resetBtn', 'ml-1', 'pl-1');
+  reset.innerText = 'Reset Game';
+  reset.setAttribute('onclick', 'location.reload()');
+
+  reset.appendChild(i);
+
+  alert.classList.add('alert', 'alert-success', 'text-center');
+  alert.innerHTML = `${name} Wins!`;
+  alert.appendChild(reset);
 };
 
 export { displayBoard, displayWinner };
