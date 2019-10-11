@@ -1,3 +1,3 @@
-const player = (name, turn) => ({ name, turn });
+const player = (name) => name;
 
 export default player;
