@@ -52,7 +52,6 @@ const displayBoard = (board) => {
     tbody.appendChild(trow);
   }
 
-  div.appendChild(iconsDiv);
   table.appendChild(thead);
   table.appendChild(tbody);
   div.appendChild(table);
