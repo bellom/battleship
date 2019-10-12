@@ -4,13 +4,13 @@
     <img alt="Version" src="https://img.shields.io/npm/v/battleship.svg">
   </a>
   <a href="https://github.com/bellom/battleship#readme" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-Yes-brightgreen.svg" />
   </a>
   <a href="https://github.com/bellom/battleship/graphs/commit-activity" target="_blank">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-Yes-green.svg" />
   </a>
   <a href="https://github.com/bellom/battleship/blob/master/LICENSE" target="_blank">
-    <img alt="License: ISC" src="https://img.shields.io/badge/MIT-Yes-brightgreen" />
+    <img alt="License: ISC" src="https://img.shields.io/badge/License-MIT-brightgreen" />
   </a>
 </p>
 
