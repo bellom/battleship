@@ -16,7 +16,7 @@
 
 ### 🏠 [Homepage](https://github.com/bellom/battleship#readme)
 
-This is a game of [Battleship](https://en.wikipedia.org/wiki/Battleship_(game)) built with JavaScript, Bootstrap, CSS, and HTML.
+This is a browser based game of [Battleship](https://en.wikipedia.org/wiki/Battleship_(game)) built with JavaScript, Bootstrap, CSS, and HTML.
 
 ## Install
 
