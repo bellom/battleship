@@ -10,7 +10,7 @@
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
   <a href="https://github.com/bellom/battleship/blob/master/LICENSE" target="_blank">
-    <img alt="License: ISC" src="https://img.shields.io/github/license/bellom/battleship" />
+    <img alt="License: ISC" src="https://img.shields.io/badge/MIT-Yes-brightgreen" />
   </a>
 </p>
 
