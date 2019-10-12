@@ -1,0 +1,122 @@
+.alert {
+    max-width: 60%;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.computer .hover:hover {
+    background-color: aliceblue;
+    border: darkgreen dotted 3px;
+}
+
+.empty {
+    border: none;
+}
+
+.hit {
+    background:
+        linear-gradient(to top left,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0) calc(50% - 0.8px),
+            red 50%,
+            rgba(0, 0, 0, 0) calc(50% + 0.8px),
+            rgba(0, 0, 0, 0) 100%),
+        linear-gradient(to top right,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0) calc(50% - 0.8px),
+            red 50%,
+            rgba(0, 0, 0, 0) calc(50% + 0.8px),
+            rgba(0, 0, 0, 0) 100%);
+    border: 2px solid red;
+}
+
+.main {
+    height: 100%;
+}
+
+.miss {
+    background-color: rgb(203, 236, 203);
+}
+
+.miss,
+.hit {
+    pointer-events: none;
+}
+
+.player .ship {
+    background-color: #2f70a5;
+    border: none;
+}
+
+.randomize {
+    border-left: #2f70a5 solid 0.1em;
+    color: #4682b4;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.randomize:active {
+    border-bottom: 2px dotted red;
+}
+
+.randomize:hover {
+    border-bottom: 2px dotted;
+}
+
+.randomize .material-icons {
+    font-size: 12px;
+}
+
+.resetBtn {
+    border-left: #2f70a5 solid 0.1em;
+
+}
+
+table {
+    margin: 0 auto;
+    width: 90%;
+}
+
+td {
+    border: 1px solid rgb(213, 213, 213);
+    position: relative;
+    width: calc(100/11%);
+}
+
+td:after {
+    content: '';
+    display: block;
+    margin-top: 100%;
+}
+
+td .content {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.td:hover {
+    background-color: aliceblue;
+}
+
+th {
+    color: #4682b4;
+    font-size: 13px;
+    font-weight: 100;
+}
+
+thead th {
+    padding-bottom: 10px;
+}
+
+.vertical-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
