@@ -18,6 +18,8 @@
 
 This is a browser based game of [Battleship](https://en.wikipedia.org/wiki/Battleship_(game)) built with JavaScript, Bootstrap, CSS, and HTML.
 
+### [Live Version](https://raw.githack.com/bellom/battleship/master/dist/index.html)
+
 ## Install
 
 Clone the repo to your local machine using `https://github.com/bellom/battleship.git`. Then install dependencies using the command `npm install`.
