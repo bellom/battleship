@@ -4,12 +4,15 @@
 
 body,
 html {
-    background-image: url("../assets/Battleships.jpg");
+    background-image: url("/assets/Battleships.jpg");
     background-size: 100vw 100vh;
     background-attachment: fixed;
     height: 100%;
 }
 
+body {
+    background-color: black;
+}
 
 .computer .hover:hover {
     background-color: aliceblue;
