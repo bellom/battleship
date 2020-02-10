@@ -18,6 +18,8 @@
 
 This is a browser based game of [Battleship](https://en.wikipedia.org/wiki/Battleship_(game)) built with JavaScript, Bootstrap, CSS, and HTML.
 
+<img width="696" alt="battleship" src="https://user-images.githubusercontent.com/31897434/74187001-fc74e980-4c4b-11ea-842f-fe67aa171b32.png">
+
 ### [Live Version](https://raw.githack.com/bellom/battleship/master/dist/index.html)
 
 ## Install
